@@ -50,22 +50,22 @@ def computeFTLE(J_array: np.ndarray, dt: float) -> np.ndarray:
     
     # dimension of the flow
     dim = np.shape(J_array)[-1]
+    dim_sizes = tuple(np.shape(J_array)[:-2])
     
     # initialize
-    ftle_field = np.zeros(tuple(np.shape(J_array)[:-2]))
+    ftle_field = np.zeros(dim_sizes)
     
     # Recursive function to ensure arbitrary dimension support
     def iterate_arbitrary_dimensions(dim, d_now=0, index=[0]*dim):
         if d_now < dim:
             d_now += 1
-            for j in range(dim):
+            for j in range(dim_sizes[d_now-1]):
                 index[d_now-1] = j
                 iterate_arbitrary_dimensions(dim, d_now, index)
         else:
             _, lam, _ = np.linalg.svd(J_array[tuple(index + [...])])
             ftle_field[tuple(index)] = 1/dt*np.log(np.max(lam))
             
-    
     # Call the function
     iterate_arbitrary_dimensions(dim)
     return ftle_field
@@ -98,17 +98,17 @@ if __name__ == "__main__":
 
     # Next, we need to make a time vector
     t0 = 0      # initial time
-    t1 = 15     # final time
-    dt = 10      # time increment
+    t1 = 12      # final time
+    dt = 0.1    # time increment <- # For standard FTLE we will only need the first and last time, but 
+                                    # it will be helpful when computing LAVD to have increments.
     time_vector = np.arange(t0,t1+dt,dt)
-
     '''We now need to specify the flow that the Flow object will operate on.'''
     parameters = {  # These are specified as defaults as well. 
         "A": 0.1,
         "epsilon":0.1,
         "omega":2*np.pi/10
     }
-    gyre.predefined_function(function_name, initial_conditions, time_vector, parameters=parameters)
+    gyre.predefined_function(function_name, initial_conditions, time_vector, parameters=parameters, include_gradv=True)
 
     # Integrate the particles over the defined time vector
     gyre.integrate_trajectories()
