@@ -1,4 +1,10 @@
-
+'''
+Flows.py and the other files in this folder allow for particle trajectories
+to be simulated from analytical functions.  Any new function should be implemented
+in its own file similar to Gyre.py.  Flows may be 2 or 3 dimensional, or, if you are 
+feeling ambitious, higher dimensional!  Custom functions can be defined in the 
+main file and should be initialized using the custom_function() class method.
+'''
 
 import os, sys, copy
 import numpy as np
