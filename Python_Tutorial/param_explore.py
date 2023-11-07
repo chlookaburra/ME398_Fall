@@ -38,8 +38,8 @@ yf      = 1 # final y-value
 """
 
 # Save variables and figs
-saveVars = 'yes'
-saveFigs = 'yes'
+saveVars = 'no'
+saveFigs = 'no'
 
 #  Initialize
 t0 = 0      # initial time
@@ -105,11 +105,11 @@ def main(x0, xf, y0, yf, t0, t1, dt, numRows, numCols):
 
     time_vector = np.arange(t0,t1+dt,dt)
     
-    #A = 0.1
-    epsilon = 0.1
-    omega   = 2*np.pi/10
+    A = 0.1
+    #epsilon = 0.1
+    omega   = 9*np.pi/5 #2*np.pi/10
     
-    for A in np.arange(0.1, 5, 5): # #np.arange(np.pi/5, 2*np.pi, 2*np.pi/5)
+    for epsilon in np.arange(0.1, 5, 5): # #np.arange(np.pi/5, 2*np.pi, 2*np.pi/5)
 
         '''We now need to specify the flow that the Flow object will operate on.'''
         parameters = {  # These are specified as defaults as well. 
@@ -131,7 +131,7 @@ def main(x0, xf, y0, yf, t0, t1, dt, numRows, numCols):
         ax[0].set_xlim([0, 2])
         ax[0].set_ylim([0, 1])
         ax[0].xaxis.set_ticks([])
-        ax[0].set_title('A='+str(A)+', $\epsilon$='+str(epsilon)+', $\omega$=$\pi$/5')
+        ax[0].set_title('A='+str(A)+', $\epsilon$='+str(epsilon)+', $\omega$=9$\pi$/5')
         
         # Loop through each trajectory in self.states and plot it on the same axis
         for i in range(0, n_particles, 20):
@@ -223,32 +223,6 @@ def main(x0, xf, y0, yf, t0, t1, dt, numRows, numCols):
         #plt.subplots_adjust(left=0.54)
         plt.subplots_adjust(left=0.58, hspace=0.35)
 
-        
-        "Create animation"
-        
-#        mpl.rcParams['animation.embed_limit'] = 100 # Mb
-        
-#        # Create a new figure
-#        fig, ax = plt.subplots(1,1)
-        
-#        # Set the x and y limits to be the same
-#        ax.axis('scaled')
-#        ax.set_xlim([0, 2])
-#        ax.set_ylim([0, 1])
-    
-#        # initialize the plot
-#        l, = ax.plot([],[],'o', markerfacecolor='blue', markersize=3)
-    
-#        # Loop through each trajectory in self.states and plot it on the same axis
-#        def update(frame):
-#            x_vals = gyre.states[:,frame,0]
-#            y_vals = gyre.states[:,frame,1]
-#            l.set_data(x_vals, y_vals)
-        
-#        ani = animation.FuncAnimation(fig, update, frames=n_times, interval=dt*1000)
-#        HTML(ani.to_jshtml())
-        
-        
         #for i in np.arange(0,3,1):
         #    ax[i].set_anchor('W')
         
