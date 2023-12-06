@@ -17,7 +17,7 @@ To gain physical intuition of the double gyre problem, parameters $A, \epsilon, 
 
 1. Run ```./Python_Tutorial/ParameterExploration/param_explore.py``` <br />
     a. Alters parameters used in the double gyre problem <br />
-    b. To replicate the parameter subplots in the presentation, run ```./Python_Tutorial/ParameterExploration/plot_params.m```
+    b. To replicate the parameter subplots in the presentation, run ```./Python_Tutorial/ParameterExploration/plot_params.m``` <br />
 2. Run ```./Python_Tutorial/ParameterExploration/animate_particles.py``` <br />
     a. Animates a grid of particles in the double gyre <br/>
 3. Run ```./Python_Tutorial/ParameterExploration/animate_FTLE.py``` <br />
