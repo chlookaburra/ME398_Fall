@@ -29,21 +29,21 @@ To gain physical intuition of the double gyre problem, parameters $A, \epsilon, 
 
 ### Static frame with dense data
 
-1. Save the LAVD field of interest in ```./Python_Tutorial/GeometricLCS/save_LAVD.py``` < br />
-2. Track the vortex core in ```./Python_Tutorial/CameraTracking/static_camera_tracking.py``` < br />
+1. Save the LAVD field of interest in ```./Python_Tutorial/GeometricLCS/save_LAVD.py``` <br />
+2. Track the vortex core in ```./Python_Tutorial/CameraTracking/static_camera_tracking.py``` <br />
     a. To save data, set ```saveVars = 'yes'``` and to save figures, ```saveFigs = 'yes'``` <br />
-3. Uncomment the corresponding section and save animation using ```./Python_Tutorial/CameraTracking/save_camera_anim.py``` < br />
+3. Uncomment the corresponding section and save animation using ```./Python_Tutorial/CameraTracking/save_camera_anim.py``` <br />
 
 ### Evolving frame with dense data
 
-1. Save the LAVD field of interest in ```./Python_Tutorial/GeometricLCS/save_LAVD.py``` < br />
-2. Track the vortex core in ```./Python_Tutorial/CameraTracking/dense_evolving_camera_tracking.py``` < br />
+1. Save the LAVD field of interest in ```./Python_Tutorial/GeometricLCS/save_LAVD.py``` <br />
+2. Track the vortex core in ```./Python_Tutorial/CameraTracking/dense_evolving_camera_tracking.py``` <br />
     a. To save data, set ```saveVars = 'yes'``` and to save figures, ```saveFigs = 'yes'``` <br />
-3. Uncomment the corresponding section and save animation using ```./Python_Tutorial/CameraTracking/save_camera_anim.py``` < br />
+3. Uncomment the corresponding section and save animation using ```./Python_Tutorial/CameraTracking/save_camera_anim.py``` <br />
 
 ### Evolving frame with sparse data
 
-1. Save the LAVD field of interest in ```./Python_Tutorial/SparseLCS/save_LAVD_sparse.py``` < br />
-2. Track the vortex core in ```./Python_Tutorial/CameraTracking/sparse_evolving_camera_tracking.py``` < br />
+1. Save the LAVD field of interest in ```./Python_Tutorial/SparseLCS/save_LAVD_sparse.py``` <br />
+2. Track the vortex core in ```./Python_Tutorial/CameraTracking/sparse_evolving_camera_tracking.py``` <br />
     a. To save data, set ```saveVars = 'yes'``` and to save figures, ```saveFigs = 'yes'``` <br />
-3. Uncomment the corresponding section and save animation using ```./Python_Tutorial/CameraTracking/save_camera_anim.py``` < br />
+3. Uncomment the corresponding section and save animation using ```./Python_Tutorial/CameraTracking/save_camera_anim.py``` <br />
