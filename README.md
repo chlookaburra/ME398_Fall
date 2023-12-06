@@ -19,7 +19,7 @@ To gain physical intuition of the double gyre problem, parameters $A, \epsilon, 
     a. Alters parameters used in the double gyre problem <br />
     b. To replicate the parameter subplots in the presentation, run ```./Python_Tutorial/ParameterExploration/plot_params.m```
 2. Run ```./Python_Tutorial/ParameterExploration/animate_particles.py``` <br />
-    a. Animates a grid of particles in the double gyre < br/>
+    a. Animates a grid of particles in the double gyre <br/>
 3. Run ```./Python_Tutorial/ParameterExploration/animate_FTLE.py``` <br />
     a. Animates the FTLE field over time <br />
 4. Run ```./Python_Tutorial/ParameterExploration/animate_FTLE_LAVD.py``` <br />
