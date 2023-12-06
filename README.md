@@ -5,11 +5,11 @@ Source code for "Towards a Predictive Framework for Tracking Lagrangian Vortices
 
 There were two main parts to this rotation project:
 
-1. Parameter exploration
-2. Camera tracking algorithm
-    a. Static frame with dense data
-    b. Evolving frame with dense data
-    c. Evolving frame with sparse data
+1. Parameter exploration <br />
+2. Camera tracking algorithm <br />
+    a. Static frame with dense data <br />
+    b. Evolving frame with dense data <br />
+    c. Evolving frame with sparse data <br />
 
 ## Parameter Exploration
 
